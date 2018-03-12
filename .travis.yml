@@ -6,7 +6,7 @@ env:
   - secure: nvoE7b/DZpzqmbxlnsIfKnTswr3UR+1CTu5JCCzJCL/XRctmh6epqZyyUC+qDyuEZY+fw9BNv47v5jhImf8IVGDe/XH7CC2IVN/etTvgDm12z2G5CfoLZqgKJ3kqnCXRuQRqD/lv7/F0AYgGWALqfxQDXvIDIuaoeKhtwrsAIJRKhuQQ/432FGJ2eLSueov4/L95mM546hHS1XSg3cTvLrCk8HFUETv8vHnpPKgrRrwQxwwRgxPvtLTCZnu4kA8TkpN12Zv13oKYYJABRmMNx/Co8nptghu61VsS7lrnW8bSUP7OPvkGvry8cOBF+zbsT5neFc92fYoAAGGnHTmjHtBAl4SYKyS5bIJz7VVTjK3GAjYUtbCvb5aDb1+2pIbAuayAFoGNS7AirCNJZabgCXU9W4G+JCWS1RZg63Jkqavf8pLfSA2FkLHc10pxULa+f8yAus0q9dGv//yBQJC+xe9lS/ELQm8DnYDpgd4xlcUChSXHycktWvVjSPp9gOav5mti5quUS/fnZFinY93C8iIi++oj4G7vaxG2PheaMj3mIhpdOhN+tCQ8zp7uf1yZ4ZqMor3OIC5jr2x/lQAP6UmR2HQvzwMQRW6ENQCSZSxER0TTV24g/lyKAR9hWr8zwCmsKb/sKucMhTg+fn/vAuE6Dx+B3aCu4pOxUp9UKzA=
   - COMMIT=${TRAVIS_COMMIT::8}
 
- after_success:
+after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=karrlein/phpmetrics-server
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
