@@ -15,5 +15,5 @@ env:
   - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
   - docker push $REPO
 
- notifications:
+notifications:
   slack: karrlein:an1enYrAJKdow0DYS4sSvoGC
