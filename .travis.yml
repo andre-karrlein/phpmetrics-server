@@ -2,19 +2,18 @@ language: bash
 
 env:
   global:
-  - secure: Vb4z2Fe88qgiTQFw/h3mt70cCnlUI3w+OJ+jwtmNF5A4zhGskiH13GXrSg0uySZ1lioENKUXo3C2HCy0guK4wjRqSFp2DL84VN+L0RQUv6H5r8Qx0S3BX2pBPyP7WpBuSfovMG9unkoxYL2DUN5vS5sv+GGWjPuw6lzJQmzfKY21PBE3Yua6bbe93eEJ0TL5h4QTl38mzzfZVcSubbDjchgMOxqnZwslVai2/v6HNZtgKYh5SwEU0VcKtgQyVAxAudRZlwFM0CPOuFOPN3bDsA3NLullsQ30u4h3K2KakFU3DnRJWgOS6DPV5KljNiUqGr3ApJX5QZf+DuazDKy+VxiEA/m9sELBCt9+5nmCZvd6IQRb7E1ANfES7zpyFLr95MTQQWvWLxgaSGCeWA0MRMAYx6x2mpCRjeETW+2g+TqWvDqzMSpBpXiHjSgo1Yt3yL4wROCiI03JE+Cpqhm+PBcoc/cUua7ERQE1Af9Nu99URWYZZb9v2IhYAbydVoNpVtds24RLz9l+oHbh3X00zBnW7Hz9Rh5M/bzjlu6zB542V79TjhCMIGaQ1GvKW66ngINvCWBFpCYMtZVY8uwgdMHAaQFuDFsHb/qy+vkQpWy8/TCYcYtPinn2eJWf2UFtakm/GxoUNgVyYhXL+eofRMrIqrV2fqT+QsYnNp7lkaE=
-  - secure: mfog9OvSA/5V8ytAm6yOl6ZbD2WTEPkpZ5L0HWt9ubHiWm/4S3M1N0NH9HXo8pZOGayVKFm97KJS2G5JkMcOP3taFa5nVbKVU/Se8A0+W3zVzOcyulN3rO8z2LUVCUavXuY/5PqR0zovvSRV4l66BfaW+vC1MVcxEO8mpj/Toyc+BM5v+aVRN8lbR64MgoZ3T4UpNsL4KuQrFqUS0WMIGDYWcxtJuztWaDI6vAbkA7KdE93e2uz9nE1aNzGrolMj82rzOVm3D4H9QgogFiWHRpLYf4FrY7dov/7uz2z/fe9n3tJyRbEywIqRvnZG34CkvDnM0OrltLg/SM2GMx5yyxg1oxvIOxi1K3Jb6tWZdShg+cb9VuHyX+Kr5vlwv6jV4aWnc66tZg7mWpHtiZTMnNcng5pTrWJKWwZKaF+5E5NqShXteOX7SdBSPFzqq3BjHYG+UoA+JIfDK9ujKZ6NjmiJo1vVmgFsNrj1hlqpQG83v+hVXxOSBX5Kfp1qmjUxce9vRY44wjyS0+S2GTXV7o+7yE6+muXELCVsfatZ34XCp3RpnuP/cozpLPs1S40xo217iyMJ4UAwgLtrYAU1mhZNEZAm0XxE1eX2A/kpFbGAnkp7etAqhGMcY8GQBezpxiscAQGgqvPpN/VuRfItkOd90OInlkJN8BUdmLZNEpQ=
-  - secure: QiAVJmBx1+toQYx4NDQloBMcNbPiF81c1xpD/C7ReJ0GTAWSdynioIv1nzw9mgu4wY493A/XyBRjFmsT/eNp1Fgw3xzTf9jamfgn8K6gESH6wUZjJzaRoNKy+gAmDePFkMOeFszWHmeEtHE8ViUGxjwI40TJBTnfUgoEFt3JitqHVyXgBJSDi6hzra9kTRRf7hhAWhIciRgPHntx4fIaHlybDGGwiK5IvFXBdLpGIA/H+XZg44PzVQ1y268dEsGINUMry4lFNLnSiLwhxD8UMO90oe1ZeAiHAlJMnLXjrldPG3rYDV3hQc49+iIApHz4IcBjl5Xp4/9nrhxAF37eby0QRxTtQZPrVks96fSMUpNOmZUtPDhfWZCqNcXgEtqwgxia2+GfIZAHtlMqCv2huL06HewMqoPMsDN22GmY33wR1RhJeZPoSVU0Mj5hljtemaimhtFBxmTc61HxWOpuAKtylKECvfuBEuXufK8rBEbqJsdNWgChWEopVDMtr6h7iW6iAcEbC8MjLWok1WauENDUIJkiC0OizGsp+zv7Oxsz4LOMI7v9KQYNm6LXqeDU+SDTb9sw3Fgl19sPDPY2M0o3qDu9T/Lqxe/E3M1t70xfa7XL2Hho6tF6xvj+XNdsihOdNnqy5kekeAVkOFs8f8DGGYmM2bZFZPeKotp6SFI=
+  - secure: nkFbG9paJ+yqVUGih1MUIhlQAU+TtAYdmhMHigzCreHs2zkC9ge70ZvC6WG4aOe4tD6MJ4wmiDK8ofyfneQGivYlcRklujqSj2g74Uzfl9mBBuiLzmLIOX1SJkV4BBqGdKI5gyVi5vG3Rj/WIj+XP6C3OqyKZautgEJLlmJYmp+yevo5PyqEW9T+TwXY/AC1vRbTmWa4qgJYlqWCVzc5zHo6XqlHLpdNQ1+Am8nSK1Wa2eh+TbrNHoCJIZamyC/y4rn9wXR+mu3KQX/1Lks3FCTlm7SBgDUfGIlde0JqjWsxBiW+ghI7v8/dyCGoLYAQU0sgSB7EgkJMJSgq/BBVsCh/jXCy9nsoWqP31NRFCLP9NyCftODco7+ZkbctGHWG9WWEB6mMj3pUgwLzbfZrAJllo1u9BN93IHV2MQUwHMhIdmOECZAngVY5lHDc1KKRxJDLqulOpHksZ4Ybj7jN1PTy2GUfHT5hC+Sl658u3GQgH0eM8rUCzDIa/pH1UQQN9mH/dstiP+KCCCscAC+/a0m99B0ND5DNBZFLtCiZEqXmpErQDQkMnjZsdbjnd/mIkYXk36cWDY61bnBnzbxu4ZZysXy4HveomZ5ez25MA7YuAvwrBhMvgKA/01E+gW6/1sicMd7QY2o3cFhyXaaQG5yVK/bNHPUvJNEh8rpO6rA=
+  - secure: nvoE7b/DZpzqmbxlnsIfKnTswr3UR+1CTu5JCCzJCL/XRctmh6epqZyyUC+qDyuEZY+fw9BNv47v5jhImf8IVGDe/XH7CC2IVN/etTvgDm12z2G5CfoLZqgKJ3kqnCXRuQRqD/lv7/F0AYgGWALqfxQDXvIDIuaoeKhtwrsAIJRKhuQQ/432FGJ2eLSueov4/L95mM546hHS1XSg3cTvLrCk8HFUETv8vHnpPKgrRrwQxwwRgxPvtLTCZnu4kA8TkpN12Zv13oKYYJABRmMNx/Co8nptghu61VsS7lrnW8bSUP7OPvkGvry8cOBF+zbsT5neFc92fYoAAGGnHTmjHtBAl4SYKyS5bIJz7VVTjK3GAjYUtbCvb5aDb1+2pIbAuayAFoGNS7AirCNJZabgCXU9W4G+JCWS1RZg63Jkqavf8pLfSA2FkLHc10pxULa+f8yAus0q9dGv//yBQJC+xe9lS/ELQm8DnYDpgd4xlcUChSXHycktWvVjSPp9gOav5mti5quUS/fnZFinY93C8iIi++oj4G7vaxG2PheaMj3mIhpdOhN+tCQ8zp7uf1yZ4ZqMor3OIC5jr2x/lQAP6UmR2HQvzwMQRW6ENQCSZSxER0TTV24g/lyKAR9hWr8zwCmsKb/sKucMhTg+fn/vAuE6Dx+B3aCu4pOxUp9UKzA=
   - COMMIT=${TRAVIS_COMMIT::8}
 
-after_success:
-  - docker login -u $DOCKER_USER -p $DOCKER_PASS
-  - export REPO=karrlein/phpmetrics-server
-  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
-  - docker build -f Dockerfile -t $REPO:$COMMIT .
-  - docker tag $REPO:$COMMIT $REPO:$TAG
-  - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
-  - docker push $REPO
+ after_success:
+       - docker login -u $DOCKER_USER -p $DOCKER_PASS
+       - export REPO=karrlein/phpmetrics-server
+       - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+       - docker build -f Dockerfile -t $REPO:$COMMIT .
+       - docker tag $REPO:$COMMIT $REPO:$TAG
+       - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
+       - docker push $REPO
 
-notifications:
-    slack: karrlein:an1enYrAJKdow0DYS4sSvoGC
+ notifications:
+         slack: karrlein:an1enYrAJKdow0DYS4sSvoGC
