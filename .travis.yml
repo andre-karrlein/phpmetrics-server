@@ -1,3 +1,11 @@
+language: bash
+
+before_script:
+    - curl -L "http://downloads.sourceforge.net/shunit2/shunit2-2.0.3.tgz" | tar zx
+
+script:
+    - bash equality_test.sh
+
 env:
   global:
   - secure: Vb4z2Fe88qgiTQFw/h3mt70cCnlUI3w+OJ+jwtmNF5A4zhGskiH13GXrSg0uySZ1lioENKUXo3C2HCy0guK4wjRqSFp2DL84VN+L0RQUv6H5r8Qx0S3BX2pBPyP7WpBuSfovMG9unkoxYL2DUN5vS5sv+GGWjPuw6lzJQmzfKY21PBE3Yua6bbe93eEJ0TL5h4QTl38mzzfZVcSubbDjchgMOxqnZwslVai2/v6HNZtgKYh5SwEU0VcKtgQyVAxAudRZlwFM0CPOuFOPN3bDsA3NLullsQ30u4h3K2KakFU3DnRJWgOS6DPV5KljNiUqGr3ApJX5QZf+DuazDKy+VxiEA/m9sELBCt9+5nmCZvd6IQRb7E1ANfES7zpyFLr95MTQQWvWLxgaSGCeWA0MRMAYx6x2mpCRjeETW+2g+TqWvDqzMSpBpXiHjSgo1Yt3yL4wROCiI03JE+Cpqhm+PBcoc/cUua7ERQE1Af9Nu99URWYZZb9v2IhYAbydVoNpVtds24RLz9l+oHbh3X00zBnW7Hz9Rh5M/bzjlu6zB542V79TjhCMIGaQ1GvKW66ngINvCWBFpCYMtZVY8uwgdMHAaQFuDFsHb/qy+vkQpWy8/TCYcYtPinn2eJWf2UFtakm/GxoUNgVyYhXL+eofRMrIqrV2fqT+QsYnNp7lkaE=
