@@ -26,7 +26,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **André Karrlein** - *Initial work* - [andre-karrlein](https://github.com/andre-karrlein), [@rb_ak1](https://twitter.com/rb_ak1)
+* **André Karrlein** - *Initial work* - [GitHub](https://github.com/andre-karrlein), [Twitter](https://twitter.com/rb_ak1)
 
 ## License
 
