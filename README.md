@@ -11,7 +11,7 @@ You can start it with this command:
 docker run --rm -p 8080:8080 -v ~/code:/var/www/code -d phpmetrics
 ```
 
-It mounts your code directory, which has your repositories in it and generate reports automatically.
+Mount your code directory, which has your repositories in it, into the container.
 
 ### Prerequisites
 
