@@ -5,7 +5,7 @@ This server will generate your reports and expose this reports as webpages.
 
 ## Getting Started
 
-You can start it by this command:
+You can start it with this command:
 
 ```
 docker run --rm -p 8080:8080 -v ~/code:/var/www/code -d phpmetrics
@@ -19,23 +19,6 @@ What things you need to install the software
 
 [Docker](https://www.docker.com/)
 
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Versioning
 
