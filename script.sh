@@ -1,12 +1,15 @@
 #!/bin/bash
 
+cd /var/www/
+
+sudo rm -f index.html
+sudo rm -rf report-*
+
 cd /var/www/code/
 
-rm -f index.html
+touch ../index.html
 
-touch index.html
-
-cat <<EOT >> index.html
+cat <<EOT >> ../index.html
 <!doctype html>
 <html lang="en">
   <head>
@@ -28,11 +31,11 @@ EOT
 
 for V in */
 do
-    php ../vendor/bin/phpmetrics --report-html=report-$V $V
-    echo '<a href="report-'$V'/" class="btn btn-info form-control">'$V'</a><br><br>' >> index.html
+    php ../vendor/bin/phpmetrics --report-html=../report-$V $V
+    echo '<a href="report-'$V'/" class="btn btn-info form-control">'$V'</a><br><br>' >> ../index.html
 done
 
-cat <<EOT >> index.html
+cat <<EOT >> ../index.html
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -40,5 +43,7 @@ cat <<EOT >> index.html
           </body>
           </html>
 EOT
+
+cd ..
 
 php -S 0.0.0.0:8080
