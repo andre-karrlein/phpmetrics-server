@@ -8,14 +8,14 @@ This server will generate your reports and expose this reports as webpages.
 You can start it with this command:
 
 ```
-docker run --rm -p 8080:8080 -v ~/code:/var/www/code -d phpmetrics
+docker run --rm -p 8080:8080 -v ~/code:/var/www/code -d karrlein/phpmetrics
 ```
 
 Mount your code directory, which has your repositories in it, into the container.
 
 ### Prerequisites
 
-What things you need to install the software
+What things you need to run this software
 
 [Docker](https://www.docker.com/)
 
