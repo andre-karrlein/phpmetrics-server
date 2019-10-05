@@ -1,6 +1,6 @@
-FROM php:7.2-cli
+FROM golang:alpine
 
-RUN apt-get update && apt-get install -y git zip
+RUN apk add php git zip
 
 RUN mkdir -p /var/www/ && \
     cd /var/www/ && \
@@ -11,6 +11,8 @@ RUN mkdir -p /var/www/ && \
 RUN cd /var/www/ && \
     php composer.phar require phpmetrics/phpmetrics
 
-COPY script.sh /var/www/script.sh
+COPY main.go /var/www/generator.go
+COPY server.go /var/www/server.go
+RUN go run generator.go
 
-CMD ["bash", "/var/www/script.sh"]
+CMD ["go", "run", "/var/www/server.go"]
