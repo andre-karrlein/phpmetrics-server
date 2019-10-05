@@ -1,16 +1,29 @@
-FROM php:7.2-cli
+FROM golang:alpine
 
-RUN apt-get update && apt-get install -y git zip
+RUN apk add \
+php \
+php-openssl \
+php-mbstring \
+php-phar \
+php-json \
+php-xml \
+php-dom \
+php-tokenizer \
+git \
+zip
 
-RUN mkdir -p /var/www/ && \
-    cd /var/www/ && \
-    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
+RUN mkdir -p /var/www/
+
+WORKDIR /var/www
+
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php && \
     php -r "unlink('composer-setup');"
 
-RUN cd /var/www/ && \
-    php composer.phar require phpmetrics/phpmetrics
+RUN php composer.phar require phpmetrics/phpmetrics
 
-COPY script.sh /var/www/script.sh
+COPY main.go /var/www/generator.go
+COPY server.go /var/www/server.go
+COPY template.html /var/www/template.html
 
-CMD ["bash", "/var/www/script.sh"]
+CMD go run /var/www/generator.go && go run /var/www/server.go
