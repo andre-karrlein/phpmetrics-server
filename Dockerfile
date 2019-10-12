@@ -1,6 +1,13 @@
-FROM golang:alpine
+FROM golang as builder
 
-RUN apk add \
+COPY src/ /go/build/
+WORKDIR /go/build/
+
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o phpmetrics-server .
+
+FROM alpine:3.10
+
+RUN apk add --update \
 php \
 php-openssl \
 php-mbstring \
@@ -18,12 +25,13 @@ WORKDIR /var/www
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php && \
-    php -r "unlink('composer-setup');"
+    php -r "unlink('composer-setup.php');"
 
 RUN php composer.phar require phpmetrics/phpmetrics
 
-COPY main.go /var/www/generator.go
-COPY server.go /var/www/server.go
 COPY template.html /var/www/template.html
+COPY --from=builder /go/build/phpmetrics-server /var/www/phpmetrics-server
 
-CMD go run /var/www/generator.go && go run /var/www/server.go
+EXPOSE 8080
+
+CMD ["/var/www/phpmetrics-server"]
