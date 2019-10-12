@@ -9,7 +9,12 @@ import (
 	"os/exec"
 )
 
-func main() {
+const (
+	repoButton     string = "<a href=\"report-%s\" class=\"btn btn-info form-control\">%s</a>"
+	regerateButton string = "<a href=\"/regenerate/%s\" class=\"btn btn-danger form-control\">regenerate report</a>"
+)
+
+func startUp() {
 	links := ""
 	fmt.Println("Generate PHP-Metrics Reports...")
 
@@ -19,9 +24,12 @@ func main() {
 	}
 
 	for _, f := range repos {
-		reportLink := generateReport(f.Name())
+		repoName := f.Name()
+		fmt.Println(fmt.Sprintf("Starting Repo: %s ...", repoName))
+		reportLink := generateReport(repoName)
 
 		links = links + reportLink
+		fmt.Println("... Finished")
 	}
 
 	createIndexFile(links)
@@ -44,6 +52,7 @@ func createIndexFile(links string) {
 
 func generateReport(repoName string) string {
 	cmd := exec.Command("php", "../vendor/bin/phpmetrics", "--report-html=../report-"+repoName, repoName)
+	cmd.Dir = "/var/www/repos/"
 	err := cmd.Run()
 	if err != nil {
 		log.Fatal(err)
@@ -53,5 +62,5 @@ func generateReport(repoName string) string {
 }
 
 func createLink(repoName string) string {
-	return fmt.Sprintf("<a href =\"report-%s\" class=\"btn btn-info form-control\">%s</a><br><br>", repoName, repoName)
+	return fmt.Sprintf(repoButton+regerateButton+"<br><br>", repoName, repoName, repoName)
 }
